@@ -16,6 +16,8 @@
     "react-loader-spinner": "^6.1.6",
     "react-router-dom": "^6.21.3",
     "react-scripts": "5.0.1",
+    "slider": "^1.0.4",
+    "swiper": "^11.0.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
