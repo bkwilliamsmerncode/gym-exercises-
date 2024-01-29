@@ -2,6 +2,9 @@ import React, { useContext } from 'react';
 import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu';
 import {Swiper, SwiperSlide, useSwiper} from "swiper/react";
 import { Box, Typography } from '@mui/material';
+import { sliderSettings } from "../utils/common"
+import { FaArrowLeftLong, FaArrowRightLong  } from "react-icons/fa6";
+import "swiper/css"
 
 
 import ExerciseCard from './ExerciseCard';
@@ -30,10 +33,11 @@ const RightArrow = () => {
 };
 
 const HorizontalScrollbar = ({ data, bodyParts, setBodyPart, bodyPart }) => (
-
+<Swiper {...sliderSettings}>
+  <SliderButtons /> 
   <div className='horizontal' LeftArrow={LeftArrow} RightArrow={RightArrow}>
     {data.map((item) => (
-      <Box 
+      <SwiperSlide 
       
         key={item.id || item}
         itemId={item.id || item}
@@ -44,11 +48,21 @@ const HorizontalScrollbar = ({ data, bodyParts, setBodyPart, bodyPart }) => (
       
         {bodyParts ? <BodyPart item={item} setBodyPart={setBodyPart} bodyPart={bodyPart} /> : <ExerciseCard exercise={item} /> }
        
-      </Box>
+      </SwiperSlide>
     ))}
   </div>
-
+</Swiper>
  
 );
 
 export default HorizontalScrollbar;
+
+const SliderButtons = () => {
+  const swiper = useSwiper();
+      return (
+          <div className="rlbtn">
+              <button onClick={() => swiper.slidePrev()} className='lbtn'><FaArrowLeftLong /></button>
+              <button onClick={() => swiper.slideNext()} className='rbtn'><FaArrowRightLong /></button>
+          </div>
+      )
+  }

@@ -45,6 +45,51 @@ body {
 .Swiper-horizontal {
   overflow: visible;
 }
+.rlbtn {
+  width: 100%;
+  display: flex;
+justify-content: center;
+}
+
+.lbtn {
+  color: white;
+  margin: 5px;
+  margin-top: 20px;
+  border: none;
+  background-color: #FF2625;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.lbtn:active {
+  color: #FF2625;
+  border: 1px solid #FF2625;
+  background-color: white;
+}
+
+.rbtn:active {
+  color: #FF2625;
+  border: 1px solid #FF2625;
+  background-color: white;
+}
+
+.rbtn {
+  color: white;
+  margin: 5px;
+  margin-top: 20px;
+  border: none;
+  background-color: #FF2625;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
 
 .react-horizontal-scrolling-menu--wrapper {
   width: 100%;
@@ -62,9 +107,10 @@ body {
   position: absolute;
   right: 40px;
   top: 0px;
-  width: 700px;
+  width: 650px;
   height: 900px;
   margin-top: -330px;
+  border-bottom-left-radius: 50px;
 
 }
 
@@ -73,7 +119,7 @@ body {
   height: 445px;
   background: #fff;
   border-top: 4px solid #FF2625;
-  border-bottom-left-radius: 20px;
+  border-bottom-left-radius: 40px;
   text-decoration: none;
   display: flex;
   justify-content: space-between;
@@ -90,7 +136,7 @@ body {
 .bodyPart-card {
   transform: scale(1, 1);
   transition: 0.3s all ease-in-out;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .exercise-card:hover,
