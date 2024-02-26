@@ -6,7 +6,7 @@ const BodyPart = ({ item, setBodyPart, bodyPart }) => (
   
   <Stack 
     type="button"
-   
+   display="flex"
     alignItems="center"
     justifyContent="center"
     className="bodyPart-card"

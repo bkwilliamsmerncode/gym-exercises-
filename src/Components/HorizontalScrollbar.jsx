@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu';
+import { VisibilityContext } from 'react-horizontal-scrolling-menu';
 import {Swiper, SwiperSlide, useSwiper} from "swiper/react";
-import { Box, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import { sliderSettings } from "../utils/common"
 import { FaArrowLeftLong, FaArrowRightLong  } from "react-icons/fa6";
 import "swiper/css"
@@ -17,7 +17,7 @@ const LeftArrow = () => {
 
   return (
     <Typography onClick={() => scrollPrev()} className="right-arrow">
-      <img src={LeftArrowIcon} alt="right-arrow" />
+      <img src={LeftArrowIcon} alt="left-arrow" />
     </Typography>
   );
 };
